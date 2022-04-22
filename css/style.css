@@ -180,6 +180,102 @@
     font-size: 1.2rem;
 }
 
+/* skills section */
+#SKILLS{
+    display: flex;
+    flex-direction: column;
+    background-color: #000000dc;
+}
+#SKILLS h1{
+    margin: 60px;
+}
+
+.info li{
+    color: white;
+    font-size: 1rem;
+}
+
+
+
+ /* TESTIMONIALS  */
+ #testimonials{
+    background-color: #000000dc;
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#card img{
+    height: 200px;
+    width: 150px;
+}
+
+#back p{
+    font-size: 1rem;
+}
+
+.container {
+    background-color: rgba(177, 211, 241, 0.2);
+    width: 200px;
+    height: 250px;
+    border-radius: 25%;
+    margin: 20px auto;
+}
+/*
+- Transition do provide ways to control the speed of our animation when changing CSS properties.
+- Transform-style: This property will verify
+if the children of an element are positioned
+in the 3d space or 2d.
+The value: preserve-3d state that the children
+of an element should be placed in the 3d - space
+*/
+#card{
+    width: 200px;
+    height: 250px;
+    position: relative;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+/* Will focus on horizontal flip card */
+/*
+It easy to rotate an html element by using
+the rotate() function from transform
+*/
+.container:hover #card{
+    transform: rotateY(180deg);
+}
+/* Positioning card front and card back*/
+#front, #back {
+    position: absolute; 
+    width: 200px;
+    height: 250px;
+    border-radius: 20%;
+    /* Have to cover most of the browsers
+    Defines whether or not the back face of an element should be visible when facing the
+    user
+    */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+#front{
+    background-color: #000000dc;
+    color: white;
+}         
+    
+#back{
+    background-color: yellowgreen;
+    color: white;
+    transform: rotateY(180deg);
+}
+
 /* projects section */
 #PROJECTS{
     display: flex;
@@ -215,6 +311,7 @@
 
 .MYCREATIONS p{
     font-size: 2rem;
+    color: white;
 }
 
 
@@ -228,6 +325,10 @@
 
 #CONTACT h1{
     margin: 50px;
+}
+
+h3{
+    color: white;
 }
 
 .form{
@@ -269,6 +370,38 @@
     cursor: pointer;
 }
 
+.CONTACT{
+    margin: 0;
+    padding: 0;
+    background-color: #000000dc;
+}
+
+.CONTACT h2{
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    float: inline-end;
+}
+
+.CONTACT{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.CONTACT img{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.CONTACT img:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+
 footer{
     display: flex;
     text-align: center;
@@ -279,3 +412,43 @@ footer{
     background-color: black;
     color: whitesmoke;
 }
+
+/* DROPDOWN START */
+.dropbtn {
+    background-color:transparent;
+    color: white;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3e3e3e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .about-drop{
+      padding-left: 20px;
+  }
+  
+  .dropdown-content a:hover {background-color: rgb(62, 62, 62);}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: transparent;}
+
+  /* DROPDOWN ENDS */
